@@ -6,11 +6,11 @@ const route = useRoute();
 const id = parseInt(route.params.id);
 
 const CoffeeList = ref([
-  { id: 1, name: 'TeaCoff', img: "https://d1e00ek4ebabms.cloudfront.net/production/40075a8a-5e87-45fe-a24d-cc2e6d7738b6.jpg" },
-  { id: 2, name: 'Coffee Guys', img: "https://okcredit-blog-images-prod.storage.googleapis.com/2021/05/Coffee---Tea-Shop1--1-.jpg" },
-  { id: 3, name: 'Elegrant Tea', img: "https://static.wixstatic.com/media/d78afb_0a71705bbb6943269ad3d6b8e68e2959~mv2.jpg/v1/fill/w_640,h_294,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/d78afb_0a71705bbb6943269ad3d6b8e68e2959~mv2.jpg" },
-  { id: 4, name: 'Coffee Lab', img: "https://www.visitmesa.com/imager/s3_us-west-1_amazonaws_com/mesa-2019/images/Jarrods-Coffee-wide-view-3_6779f590680632ee6ed1060f38937405.jpg" },
-  { id: 5, name: 'Two Tea', img: "https://rccl-h.assetsadobe.com/is/image/content/dam/royal/data/ship/spectrum/assets/renders/spectrum-of-the-seas-coffee-and-tea-shop.jpg?$750x420$" },
+  { id: 1, name: 'TeaCoff', img: "https://d1e00ek4ebabms.cloudfront.net/production/40075a8a-5e87-45fe-a24d-cc2e6d7738b6.jpg", text:'Coffee 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ex, sed nam odit laborum incidunt magni esse odio! Repudiandae, necessitatibus.'},
+  { id: 2, name: 'Coffee Guys', img: "https://okcredit-blog-images-prod.storage.googleapis.com/2021/05/Coffee---Tea-Shop1--1-.jpg", text:'Coffee 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ex, sed nam odit laborum incidunt magni esse odio! Repudiandae, necessitatibus.' },
+  { id: 3, name: 'Elegrant Tea', img: "https://static.wixstatic.com/media/d78afb_0a71705bbb6943269ad3d6b8e68e2959~mv2.jpg/v1/fill/w_640,h_294,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/d78afb_0a71705bbb6943269ad3d6b8e68e2959~mv2.jpg", text:'Coffee 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ex, sed nam odit laborum incidunt magni esse odio! Repudiandae, necessitatibus.' },
+  { id: 4, name: 'Coffee Lab', img: "https://www.visitmesa.com/imager/s3_us-west-1_amazonaws_com/mesa-2019/images/Jarrods-Coffee-wide-view-3_6779f590680632ee6ed1060f38937405.jpg", text:'Coffee 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ex, sed nam odit laborum incidunt magni esse odio! Repudiandae, necessitatibus.' },
+  { id: 5, name: 'Two Tea', img: "https://rccl-h.assetsadobe.com/is/image/content/dam/royal/data/ship/spectrum/assets/renders/spectrum-of-the-seas-coffee-and-tea-shop.jpg?$750x420$", text:'Coffee 5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ex, sed nam odit laborum incidunt magni esse odio! Repudiandae, necessitatibus.' },
   { id: 6, name: 'Coffero', img: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e3539a49733633.58bd884b167cc.jpg" }
 ]);
 
@@ -26,12 +26,10 @@ const CoffeeList = ref([
     <div class="bg-dark shadow-sm mx-auto" style="width: 45%; height: 320px; margin-top: -20px; border-radius: 21px 21px 0 0;">
       <img :src="CoffeeList[id - 1].img" width="450" height="300" style="margin-top: 10px;" />
     </div> <br> <br>
-   Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima facere consectetur cum qui tempora? Odit similique ullam vitae eaque sint
-    iste ipsa. Aspernatur quam quasi iusto possimus aliquid saepe, ut beatae deserunt nulla eos cupiditate adipisci aut dolores eaque iste 
-    mollitia. Delectus enim quam esse corrupti ea? Eligendi magnam numquam quasi rerum saepe. Nisi autem quae veritatis magni fuga nihil at non 
-    rerum, voluptates nulla officia cumque quis, impedit obcaecati sed dolor aliquam omnis? Magnam maxime aspernatur corrupti nulla fugit! 
-    Accusantium voluptatum fugit harum ab! Impedit voluptate quod consectetur, eius pariatur ex at, placeat cupiditate exercitationem laborum,
-    blanditiis ab recusandae?
+    <div>
+      {{ CoffeeList[id - 1].name }} <br>
+      {{ CoffeeList[id - 1].text }}
+    </div>
  <br> <br> <br> </div> 
   </template>
   
